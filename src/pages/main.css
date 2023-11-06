@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap");
+
+:root {
+  --main-color: #2e0834;
+  --second-color: #aeaeae;
+  --second-darker-color: #9a9a9a;
+  --text: #acdaee;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  background: var(--main-color);
+  color: var(--text);
+}
+
+.ciemny2 {
+  color: var(--second-color);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 40px;
+}
+
+.home > h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(32px, 7vw, 92px);
+  margin: 0;
+}
+
+.home_h2 {
+  font-weight: 600;
+  font-size: clamp(24px, 2vw, 48px);
+  margin: 0;
+}
+
+.classic_button {
+  padding: 20px 40px;
+  color: black;
+  background-color: white;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.login {
+  padding: 5% 10%;
+  display: grid;
+  grid-template-areas: "main aside";
+  grid-template-columns: 2fr 3fr;
+  height: 90vh;
+}
+.login > main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  gap: 30px;
+}
+.login > main > .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.login > main > h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+.login > main > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.input_container {
+  /* border: 1px solid var(--second-color); */
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_container > label {
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  left: 5px;
+  pointer-events: none;
+  background-color: transparent;
+  transition: 750ms all ease-in-out;
+}
+
+.input_container > .form_input {
+  all: unset;
+  width: 100%;
+  height: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 2px solid var(--text);
+  background-color: transparent;
+  color: var(--text);
+  outline: none;
+}
+
+.input_container > .form_input:hover ~ label,
+.input_container > .form_input:not(:placeholder-shown) ~ label {
+  transform: translateY(-40px);
+}
+
+.utilities {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.logowanie_button {
+  width: 100%;
+  background-color: var(--second-color);
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px 0;
+  text-decoration: none;
+}
+
+.logowanie_button:hover {
+  background-color: var(--second-darker-color);
+}
+.login > main > footer {
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.login > aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login > aside > img {
+  width: 30vw;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+.dodawanie {
+  display: flex;
+  flex-direction: column;
+}
+
+.dodawanie > nav {
+  width: 100%;
+  border-bottom: 1px solid var(--text);
+  padding: 20px 10%;
+  font-size: 38px;
+}
+
+.dodawanie > main {
+  padding: 10%;
+}
+
+.dodawanie > main > form {
+  display: grid;
+  grid-template-areas: "text_inputs image_inputs";
+  grid-template-columns: 2fr 5fr;
+  gap: 100px;
+}
+
+.dodawanie > main > form > .text_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.dodawanie input[type="submit"] {
+  background-color: var(--text);
+  color: white;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 32px;
+  font-weight: 400;
+  width: 100%;
+}
+.dodawanie > main > form > .image_inputs {
+  border-radius: 30px;
+  border: dashed 5px var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
