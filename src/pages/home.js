@@ -16,6 +16,9 @@ function Home() {
       <a href="prezentacja.pdf" download>
         Pobierz prezentację na temat pozycjonowania stron
       </a>
+      <a href="prezentacja.txt" download>
+        Pobierz uzasadnienie dlaczego nie korzystamy z pozycjonowania stron
+      </a>
     </div>
   );
 }
